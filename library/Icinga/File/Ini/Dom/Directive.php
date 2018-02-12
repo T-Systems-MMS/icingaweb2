@@ -162,6 +162,10 @@ class Directive
         // line breaks in the value should always match the current system EOL sequence
         // to assure editable configuration files
         $str = preg_replace("/(\r\n)|(\n)/", PHP_EOL, $str);
+
+        //line breaks are not allowed here, replace it with a comma
+        $str = str_replace(PHP_EOL, ',', $str);
+
         return $str;
     }
 }
