@@ -40,3 +40,9 @@ CREATE TABLE `icingaweb_user_preference`(
   `mtime`    timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`username`,`section`,`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `icingaweb_settings`(
+  `filename` varchar(254) COLLATE utf8_unicode_ci NOT NULL,
+  `data`  TEXT COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`filename`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
